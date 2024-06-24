@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vk9w80m4c-dotnet-basic-gitops
+  description: This is GitOps manifest for vk9w80m4c-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vk9w80m4c-dotnet-basic
+    janus-idp.io/tekton: vk9w80m4c-dotnet-basic 
+    backstage.io/kubernetes-id: vk9w80m4c-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vk9w80m4c-dotnet-basic
